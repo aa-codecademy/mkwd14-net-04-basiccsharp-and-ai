@@ -1,7 +1,7 @@
 # Class 01 – Introduction to C# and Visual Studio 😊
 
-**Trainer:** Trainer Name  <br>
-Contact: mail
+**Trainer:** Martin Panovski  <br>
+Contact: panovski.martin93@gmail.com
 
 ---
 
