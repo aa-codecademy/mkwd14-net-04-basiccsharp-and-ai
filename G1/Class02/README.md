@@ -1,7 +1,7 @@
 # Class 02 – Data Types and Branching 😋
 
-**Trainer:** Trainer Name  <br>
-Contact: mail
+**Trainer:** Martin Panovski  <br>
+Contact: panovski.martin93@gmail.com
 
 ---
 
