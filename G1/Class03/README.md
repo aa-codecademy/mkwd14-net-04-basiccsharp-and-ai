@@ -1,7 +1,7 @@
 # Class 03 – Loops and Arrays 😉
 
-**Trainer:** Trainer Name  <br>
-Contact: mail
+**Trainer:** Martin Panovski  <br>
+Contact: panovski.martin93@gmail.com
 
 ---
 
