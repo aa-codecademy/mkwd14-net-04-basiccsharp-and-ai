@@ -1,7 +1,7 @@
 # Class 04 – Methods, Strings, and DateTime 😎
 
-**Trainer:** Trainer Name  <br>
-Contact: mail
+**Trainer:** Martin Panovski  <br>
+Contact: panovski.martin93@gmail.com
 
 ---
 
@@ -66,11 +66,11 @@ public static void SayBye(){
 ## EXERCISE 1
 
 Create **two methods**:
-- `Sum` → accepts two numbers and returns their sum
-- `Subtract` → accepts two numbers and returns their difference
+- `Multiply` → accepts two numbers and returns their product
+- `Divide` → accepts two numbers and returns their divison
 
 From the console:
-- Ask the user to enter `+` or `-`
+- Ask the user to enter `*` or `/`
 - Ask the user to enter two numbers
 - Call the corresponding method
 - Print the result in the console
