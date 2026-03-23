@@ -1,7 +1,7 @@
 # Class 04 – Methods, Strings, and DateTime 😎
 
-**Trainer:** Trainer Name  <br>
-Contact: mail
+**Trainer:** Martin Panovski  <br>
+Contact: panovski.martin93@gmail.com
 
 ---
 
