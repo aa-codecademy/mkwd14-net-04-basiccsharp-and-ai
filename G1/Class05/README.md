@@ -103,6 +103,61 @@ anne.Talk("Hi!");
 
 ---
 
+## EXERCISE 1
+
+Create a class **Human**.
+
+Add properties:
+- FirstName
+- LastName
+- Age
+
+Create a method **GetPersonStats** that:
+- Returns the full name
+- Returns the age
+
+Ask the user for input, create an object and print the result in the console.
+
+---
+
+## EXERCISE 2
+
+Create a class **Dog**.
+
+Add properties:
+- Name
+- Race
+- Color
+
+Add methods:
+- Eat → prints “The dog is now eating.”
+- Play → prints “The dog is now playing.”
+- ChaseTail → prints “The dog is now chasing its tail.”
+
+Ask the user to:
+- Enter dog data
+- Choose one of the actions
+
+Call the selected method.
+
+---
+
+## EXERCISE 3
+
+Create a class **Student** with properties:
+- Name
+- Academy
+- Group
+
+Create an array with **5 Student objects**.
+
+Ask the user to enter a name:
+- If the student exists → print the information
+- If not → print an error message
+
+---
+
+
 
 ## Questions? ❓
 
