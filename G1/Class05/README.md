@@ -1,6 +1,6 @@
 # Class 05 – Classes and Objects 😍
 
-**Trainer:** Trainer Name  <br>
+**Trainer:** Martin Panovski  <br>
 Contact: panovski.martin93@gmail.com
 
 ---
