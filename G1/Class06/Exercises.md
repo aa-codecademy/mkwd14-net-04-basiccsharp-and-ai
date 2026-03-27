@@ -130,7 +130,62 @@ Think in terms of **features**, not lines of code:
 
 ---
 
+## Task 3
 
+Create an ATM application. A customer should be able to authenticate with card number and pin and should be greeted with a message greeting them by full name. After that they can choose one of the following:
+
+1. Balance checking  
+2. Cash withdrawal  
+3. Cash deposition  
+
+In order for the ATM app to work we need Customers.
+
+**Bonus:** The balance and pin should not be public  
+**Bonus:** Ask the customer if they want another action  
+**Bonus:** Add an option to register a new card  
+
+---
+
+### 🧠 Design Hint – Separate Methods
+
+This task is **too big for one method**.  
+Split it into logical parts:
+
+- Authentication (card + pin)
+- ATM menu
+- Balance operations
+- Deposit / Withdraw
+- Repeating actions
+
+---
+
+### 🤖 Copilot – Step by Step Guidance
+
+**Step 1 – Customer model**
+> Create a `Customer` class with properties and methods that protect sensitive data.
+
+**Step 2 – Seed data**
+> Create a collection of customers with predefined data.
+
+**Step 3 – Authentication**
+> Create a method that authenticates a customer by card number and pin.
+
+**Step 4 – ATM menu**
+> Create a method that displays ATM options and returns the selected action.
+
+**Step 5 – Transactions**
+> Create separate methods for balance check, withdrawal and deposit.
+
+**Step 6 – Program loop**
+> Add logic that allows the customer to perform multiple actions or log out.
+
+---
+
+### ✅ Validation & Reflection
+- Is the user input validated, so invalid values are not accepted?
+- Is the ATM menu easy to extend with new options?
+
+---
 
 ## Questions? ❓
 
