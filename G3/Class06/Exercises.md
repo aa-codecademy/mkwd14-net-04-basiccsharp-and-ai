@@ -1,0 +1,194 @@
+# Exercises Class 6 📒
+
+---
+
+## Task 1
+
+Create a method called NumberStats that accepts a number. This method should:
+
+* Find out if the number is negative or positive
+* Find out if the number is odd or even
+* Find out if the number is decimal or integer
+* After finding all the stats it should print them like this:
+
+* **Stats for number: 25**
+  * Positive
+  * Integer
+  * Odd
+
+The number should be entered in the console by the user.
+
+**Bonus**: Validate if the user is entering a number  
+**Bonus**: Ask the user to press X to exit or any other key to enter new number.
+
+---
+
+### 🧠 Design Hint – Separate Methods
+
+Before writing code, think about **splitting the logic**:
+- One method for reading and validating user input
+- One method for analyzing the number (positive/negative, integer/decimal, odd/even)
+- One method for printing the results
+
+Avoid putting all logic inside `Main`.
+
+---
+
+### 🤖 Copilot – Step by Step Guidance
+
+**Step 1 – Main idea**
+> Create a main method that controls the flow: input → processing → output.
+
+**Step 2 – Input handling**
+> Create a separate method that asks the user for a number and returns a valid numeric value.
+
+**Step 3 – Number analysis**
+> Create a method that receives the number and determines its stats (sign, type, parity).
+
+**Step 4 – Output**
+> Create a method that prints the stats in the exact format shown in the task.
+
+**Bonus – Loop**
+> Add logic that allows the user to repeat the process or exit.
+
+---
+
+### ✅ Validation & Reflection
+
+- Does each method have **one clear responsibility**?
+- Can you understand what the program does by only reading method names?
+- Is `Main` short and readable?
+- What logic could be reused if this was a bigger application?
+
+---
+
+## Task 2
+
+Create a class User with the following:
+
+* Id - int
+* Username - string
+* Password - string
+* Messages - Array of strings
+
+Create an array of users and add 3 users to it manually ( hard-coded ).
+
+Create a Console UI that will ask the user:
+
+* Log in - When selected the user should be asked for username and password. If the user is found print welcome message and the messages that the user has in the Messages property:
+  * **Welcome NAME. Here are your messages:**
+    * Message1
+    * Message2
+  * If not found, it should print an error message
+* Register - When selected the user should be asked to enter Username and password (ID should be generated automatically). It should then check if a there is already a username in the array of users like that. If there is, print a message that there is already a user called like that. If not, create a new user object from the information given in the console and add it to the Users array. Then print all the users by Id and Username
+  * **Registration complete! Users:**
+    * 23 Username1
+    * 44 Username2
+    * 1 Username3
+    * 56 Username4
+
+---
+
+### 🧠 Design Hint – Separate Methods
+
+Think in terms of **features**, not lines of code:
+- One method for showing the menu
+- One method for login logic
+- One method for registration logic
+- One method for printing users
+- One helper method for finding a user
+
+---
+
+### 🤖 Copilot – Step by Step Guidance
+
+**Step 1 – Model**
+> Create a `User` class with the required properties.
+
+**Step 2 – Initial data**
+> Create a collection of users and populate it with hard-coded users.
+
+**Step 3 – Menu**
+> Create a method that prints the menu and returns the user’s choice.
+
+**Step 4 – Login**
+> Create a method that handles login: input, search and result message.
+
+**Step 5 – Registration**
+> Create a method that handles registration and adds a new user if valid.
+
+**Step 6 – Program flow**
+> In `Main`, call the appropriate methods based on the selected menu option.
+
+---
+
+### ✅ Validation & Reflection
+
+- Is login logic separated from registration logic?
+- Are usernames compared in a consistent way (case sensitivity)?
+- Is your code easy to extend with a new menu option?
+
+---
+
+## Task 3
+
+Create an ATM application. A customer should be able to authenticate with card number and pin and should be greeted with a message greeting them by full name. After that they can choose one of the following:
+
+1. Balance checking  
+2. Cash withdrawal  
+3. Cash deposition  
+
+In order for the ATM app to work we need Customers.
+
+**Bonus:** The balance and pin should not be public  
+**Bonus:** Ask the customer if they want another action  
+**Bonus:** Add an option to register a new card  
+
+---
+
+### 🧠 Design Hint – Separate Methods
+
+This task is **too big for one method**.  
+Split it into logical parts:
+
+- Authentication (card + pin)
+- ATM menu
+- Balance operations
+- Deposit / Withdraw
+- Repeating actions
+
+---
+
+### 🤖 Copilot – Step by Step Guidance
+
+**Step 1 – Customer model**
+> Create a `Customer` class with properties and methods that protect sensitive data.
+
+**Step 2 – Seed data**
+> Create a collection of customers with predefined data.
+
+**Step 3 – Authentication**
+> Create a method that authenticates a customer by card number and pin.
+
+**Step 4 – ATM menu**
+> Create a method that displays ATM options and returns the selected action.
+
+**Step 5 – Transactions**
+> Create separate methods for balance check, withdrawal and deposit.
+
+**Step 6 – Program loop**
+> Add logic that allows the customer to perform multiple actions or log out.
+
+---
+
+### ✅ Validation & Reflection
+- Is the user input validated, so invalid values are not accepted?
+- Is the ATM menu easy to extend with new options?
+
+---
+
+## Questions? ❓
+
+If you have any questions during or after the class, feel free to ask.
+
+All code examples and exercises can be found in the **GitHub repository** for this course.
