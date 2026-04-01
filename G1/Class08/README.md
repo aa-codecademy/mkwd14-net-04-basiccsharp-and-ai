@@ -1,7 +1,7 @@
 # Class 08 - Collection Types 😏
 
-**Trainer:** Trainer name  <br>
-Contact: mail
+**Trainer:** Martin Panovski  <br>
+Contact: panovski.martin93@gmail.com
 
 ---
 
