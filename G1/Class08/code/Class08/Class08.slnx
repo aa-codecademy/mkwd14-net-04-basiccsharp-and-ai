@@ -1,0 +1,5 @@
+<Solution>
+  <Project Path="Class08.Exercise1/Class08.Exercise1.csproj" />
+  <Project Path="Class08.GenericCollections/Class08.GenericCollections.csproj" />
+  <Project Path="Class08.LINQ/Class08.LINQ.csproj" />
+</Solution>
