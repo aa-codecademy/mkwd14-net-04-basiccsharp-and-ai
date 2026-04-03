@@ -1,7 +1,7 @@
 # Class 08 - Collection Types 😏
 
-**Trainer:** Trainer name  <br>
-Contact: mail
+**Trainer:** `Ilija Mitev`  <br>
+Contact: `ilija.mitev3@gmail.com`
 
 ---
 
