@@ -8,6 +8,9 @@ string developerDetails = developer.GetDetails();
 Console.WriteLine(developerDetails);
 Console.WriteLine(developer.CalculateAnnualBonus());
 
+//Console.WriteLine(developer.Salary); // Cannot access *protected* property outside the child class
+Console.WriteLine(developer.GetSalary());
+
 
 Manager manager = new Manager(1, "John", "Johnsky", 34, 1000, Seniority.Junior, "IT");
 Console.WriteLine(manager);

@@ -34,5 +34,10 @@ namespace Domain.Models
         {
             return Salary * 0.3;
         }
+
+        public string GetSalary()
+        {
+            return Salary.ToString("C");
+        }
     }
 }

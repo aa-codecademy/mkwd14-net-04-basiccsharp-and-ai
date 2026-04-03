@@ -8,7 +8,9 @@ namespace Domain.Models
         public string FirstName { get; set; }
         public string LastName { get; set; }
         public int Age { get; set; }
-        public double Salary { get; set; }
+        // *protected* is an access modifier that makes a member accessible within its own class
+        // and by derived (child) classes - but not from the outside world
+        protected double Salary { get; set; }
         public Seniority Seniority { get; set; }
 
         // TIP: Prefer vertical style of coding when having multiple parameters to improve readability

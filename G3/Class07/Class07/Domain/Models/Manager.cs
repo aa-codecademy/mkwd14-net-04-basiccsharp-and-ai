@@ -19,5 +19,9 @@ namespace Domain.Models
             Department = department;
         }
 
+        public override string ToString()
+        {
+            return $"Manager {FirstName} {LastName}";
+        }
     }
 }
