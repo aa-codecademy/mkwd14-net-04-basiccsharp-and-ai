@@ -1,0 +1,5 @@
+<Solution>
+  <Project Path="Collections/Collections.csproj" />
+  <Project Path="Domain/Domain.csproj" />
+  <Project Path="LINQ/LINQ.csproj" />
+</Solution>
