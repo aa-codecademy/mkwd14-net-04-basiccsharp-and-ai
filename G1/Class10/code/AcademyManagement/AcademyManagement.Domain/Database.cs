@@ -8,6 +8,12 @@ public class Database
     public List<Trainer> Trainers { get; set; } = new List<Trainer>();
     public List<Student> Students { get; set; } = new List<Student>();
 
+    public Database()
+    {
+        SeedData();
+    }
+
+
     private void SeedData()
     {
         string[] subjects = { "HTML5", "CSS3", "BasicJS", "AdvancedJS", "BasicCSharp", "AdvancedCSharp", "Database" };
