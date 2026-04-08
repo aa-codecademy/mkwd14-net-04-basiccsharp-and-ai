@@ -1,0 +1,5 @@
+<Solution>
+  <Project Path="AcademyManagement.App/AcademyManagement.App.csproj" Id="e125f784-46ce-452e-9828-144ee5ed63d4" />
+  <Project Path="AcademyManagement.Domain/AcademyManagement.Domain.csproj" Id="aac5181c-77fa-40e3-94d3-293d12d4e934" />
+  <Project Path="AcademyManagement.Services/AcademyManagement.Services.csproj" Id="c2d28405-6cf3-4c57-97f6-2c232b89f563" />
+</Solution>
