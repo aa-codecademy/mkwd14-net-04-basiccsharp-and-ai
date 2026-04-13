@@ -8,6 +8,12 @@ namespace AcademyApp
         {
             Admin admin = loggedInUser as Admin;
 
+            if (admin == null)
+            {
+                Console.WriteLine($"Error: Logged in user is not an admin.");
+                return;
+            }
+
             //Admin admin = (Admin)loggedInUser;
             //if(loggedInUser is Admin)
             //{
@@ -54,7 +60,7 @@ namespace AcademyApp
                     Console.WriteLine("Enter the username of the user:");
                     username = Console.ReadLine();
 
-                    if(StaticDatabase.Users.Any(u => u.Username.Equals(username)))
+                    if (StaticDatabase.Users.Any(u => u.Username.Equals(username)))
                     {
                         Console.WriteLine("Username already exists. Please choose a different username.");
                         continue;
@@ -134,7 +140,108 @@ namespace AcademyApp
             }
         }
 
-        public static void DisplayTrainerMenu(User loggedInUser) { }
-        public static void DisplayStudentMenu(User loggedInUser) { }
+        public static void DisplayTrainerMenu(User loggedInUser)
+        {
+            Trainer trainer = loggedInUser as Trainer;
+
+            if (trainer == null)
+            {
+                Console.WriteLine($"Error: Logged in user is not a trainer.");
+                return;
+            }
+
+            Console.WriteLine($"Choose what you want to do:");
+            Console.WriteLine($"1. List all my subjects?");
+            Console.WriteLine($"2. List all students?");
+            Console.WriteLine($"3. Set student grade?");
+
+            int choice;
+            while (!int.TryParse(Console.ReadLine(), out choice) || choice < 1 || choice > 3)
+            {
+                Console.WriteLine($"Invalid input. Please enter a number between 1 and 3.");
+            }
+
+            if (choice == 1)
+            {
+                Console.WriteLine($"You chose to list all your subjects.");
+                Console.WriteLine($"Your subjects:");
+                foreach (var subject in trainer.Subjects)
+                {
+                    Console.WriteLine($"{subject.Name} - {subject.Academy}");
+                }
+            }
+            else if (choice == 2)
+            {
+                Console.WriteLine($"You chose to list all students.");
+                Console.WriteLine($"All students:");
+                var students = StaticDatabase.Users.Where(u => u.Role == Role.Student).ToList();
+                foreach (var student in students)
+                {
+                    Console.WriteLine($"{student.FullName} - {student.Username}");
+                }
+            }
+            else if (choice == 3)
+            {
+                Console.WriteLine($"You chose to set a student's grade.");
+                Console.WriteLine($"All students:");
+                var students = StaticDatabase.Users.Where(u => u.Role == Role.Student).ToList();
+                foreach (var student in students)
+                {
+                    Console.WriteLine($"{student.FullName} - {student.Username}");
+                }
+
+                Console.Write($"Enter the username of the student you want to set a grade for: ");
+                string username = Console.ReadLine();
+
+                while (!students.Any(s => s.Username.Equals(username)))
+                {
+                    Console.WriteLine($"No student found with the username '{username}'. Please enter a valid username:");
+                    username = Console.ReadLine();
+                }
+
+                var studentToGrade = students.First(s => s.Username.Equals(username)) as Student;
+
+                Console.WriteLine("Choose a subject to set the grade for:");
+                for (int i = 0; i < trainer.Subjects.Count; i++)
+                {
+                    Console.WriteLine($"{i + 1}. {trainer.Subjects[i].Name} - {trainer.Subjects[i].Academy}");
+                }
+
+                int subjectChoice;
+                Console.Write("Enter the number corresponding to the subject: ");
+                while (!int.TryParse(Console.ReadLine(), out subjectChoice) || subjectChoice < 1 || subjectChoice > trainer.Subjects.Count)
+                {
+                    Console.WriteLine($"Invalid input. Please enter a number between 1 and {trainer.Subjects.Count}.");
+                }
+
+                Subject selectedSubject = trainer.Subjects[subjectChoice - 1];
+
+                Console.Write("Enter the grade (5-10): ");
+                int grade;
+                while (!int.TryParse(Console.ReadLine(), out grade) || grade < 5 || grade > 10)
+                {
+                    Console.WriteLine($"Invalid input. Please enter a number between 5 and 10.");
+                }
+
+                // Here you would set the grade for the student in the selected subject.
+                studentToGrade.SetGrade(selectedSubject, grade);
+            }
+        }
+        public static void DisplayStudentMenu(User loggedInUser) {
+            Student student = loggedInUser as Student;
+
+            Console.WriteLine("Here are your subjects and grades:");
+            foreach(var subject in student.Subjects)
+            {
+                int grade = 0;
+
+                if(student.Grades.Any(x => x.Key.Id == subject.Id))
+                {
+                    grade = student.Grades.First(x => x.Key.Id == subject.Id).Value;
+                }
+
+                Console.WriteLine($"{subject.Name} - {subject.Academy}: Grade: {(grade == 0 ? "Not graded yet" : grade.ToString())}");
+            }
+        }
     }
 }
